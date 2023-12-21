@@ -1,0 +1,51 @@
+﻿@page
+@model AppleStoreIdentity.Pages.DetailsDeviceModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Device</h4>
+    <hr />
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">@Html.DisplayFor(model => model.Device.Name)</h4>
+            </div>
+            <div class="card-body">
+                    @switch (Model.Device.CategoryId)
+                    {
+                        case 1:
+                        <p class="lead">iPad</p>
+                            break;
+                        case 2:
+                        <p class="lead">iPhone</p>
+                            break;
+                        case 3:
+                        <p class="lead">Mac</p>
+                            break;
+                        case 4:
+                        <p class="lead">Watch</p>
+                            break;
+                        case 5:
+                        <p class="lead">iMac</p>
+                            break;
+                }
+                </p>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">R$@Html.DisplayFor(model => model.Device.Price)</h1>
+                <p class="lead">
+                    @Html.DisplayFor(model => model.Device.Description)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-page="./EditDevice" asp-route-id="@Model.Device?.Id">Editar</a> |
+    <a asp-page="./Index">Voltar</a>
+</div>

@@ -1,0 +1,64 @@
+﻿@page "/AboutUs"
+@{
+    Layout = "_Layout";
+}
+
+<style>
+
+    .logo {
+        filter: drop-shadow(0px 0px 15px#000000);
+    }
+
+</style>
+
+<div id="carouselExampleIndicators" class="carousel slide carousel-dark">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner bg-ligth">
+        <div class="carousel-item active">
+            <div class="container my-5">
+                <div class="position-relative p-5 text-center text-muted border rounded-5">
+                    <img class="logo" src="/LogoApple.png" width="150" />
+                    <h1 class="text-body-emphasis">Uma história única</h1>
+                    <p class="col-lg-6 mx-auto mb-4 text-dark">
+                        A Apple, gigante da tecnologia, é muito mais do que uma marca; é uma força motriz na revolução digital. Fundada por Steve Jobs, Steve Wozniak e Ronald Wayne, a empresa tornou-se sinônimo de inovação, design elegante e experiências de usuário incomparáveis.
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container my-5">
+                <div class="position-relative p-5 text-center text-muted border rounded-5">
+                    <img class="logo" src="/LogoApple.png" width="150" />
+                    <br />
+                    <h1 class="text-body-emphasis">O DNA Apple</h1>
+                    <p class="col-lg-6 mx-auto mb-4 text-dark">
+                        Com seus sistemas operacionais intuitivos, como o macOS e o iOS, a Apple proporciona uma experiência coesa em todos os dispositivos. A loja de aplicativos App Store é um centro de inovação, abrigando inovações que transformam a maneira como vivemos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container my-5 rounded-2">
+                <div class="position-relative p-5 text-center text-muted border rounded-5">
+                    <img class="logo" src="/LogoApple.png" width="150" />
+                    <br />
+                    <h1 class="text-body-emphasis">Inovação sempre</h1>
+                    <p class="col-lg-6 mx-auto mb-4 text-dark">
+                        A Apple é mais do que uma empresa de tecnologia; é uma influência cultural que molda o futuro da computação e comunicação. Seu impacto global é evidente nas mãos de bilhões de usuários que confiam na marca para impulsionar sua jornada digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+</div>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="icon" href="/LogoApple.png" />
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a asp-page="/Index" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="/LogoApple.png" width="40" />
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a class="nav-link px-2 text-dark" asp-page="/Index">Produtos</a></li>
+                <li><a class="nav-link px-2 text-dark" asp-page="/Privacy">Privacidade</a></li>
+                <li><a class="nav-link px-2 text-dark" asp-page="/AboutUs">Sobre Nós</a></li>
+                <p>
+                    <a asp-page="/CreateDevice" class="btn btn-info text-ligth">Criar Novo</a>
+                </p>
+            </ul>
+            <partial name="_LoginPartial.cshtml" />
+        </header>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a asp-page="/Index" class="text-dark nav-link px-2 text-body-secondary">Produtos</a></li>
+                <li class="nav-item"><a asp-page="/Privacy" class="text-dark nav-link px-2 text-body-secondary">Privacidade</a></li>
+                <li class="nav-item"><a asp-page="/AboutUs" class="text-dark nav-link px-2 text-body-secondary">Sobre Nós</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 Instituto Infnet</p>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

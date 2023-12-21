@@ -1,0 +1,32 @@
+﻿@page
+@model LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" asp-page-handler="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ViewModel.Email"></label>
+                <input asp-for="ViewModel.Email" class="form-control" />
+                <span asp-validation-for="ViewModel.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ViewModel.Password"></label>
+                <input asp-for="ViewModel.Password" class="form-control" />
+                <span asp-validation-for="ViewModel.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               <div class="checkbox">
+                   <label asp-for="ViewModel.RememberMe">
+                       <input asp-for="ViewModel.RememberMe" />
+                       @Html.DisplayNameFor(m => m.ViewModel.RememberMe)
+                   </label>
+               </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Login</button>
+        </form>
+    </div>
+</div>

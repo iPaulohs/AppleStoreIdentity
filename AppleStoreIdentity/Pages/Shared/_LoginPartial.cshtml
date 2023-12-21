@@ -1,0 +1,22 @@
+﻿@inject SignInManager<IdentityUser> _signInManager
+@using Microsoft.AspNetCore.Identity
+
+
+
+<div class="d-flex">
+    @if (_signInManager.IsSignedIn(User))
+    {
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <a method="nav-link px-2 text-primary" asp-page="/Logout">
+                Logout @User.Identity.Name
+            </a>
+        </ul>
+    }
+    else
+    {
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a class="nav-link px-2 text-primary" asp-page="/Login">Login</a></li>
+            <li><a class="nav-link px-2 text-primary" asp-page="/Register">Registrar</a></li>
+        </ul>
+    }
+</div>
